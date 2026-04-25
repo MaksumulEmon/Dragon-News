@@ -10,7 +10,7 @@ const Header = () => {
             <div className='text-center space-y-2 mt-4'>
                 <Image src={logo} width={300} alt="logo" className='mx-auto'/>
               <p>Journalism Without Fear or Favour</p>
-              <p>{format(new Date(), "yyyy-MM-dd")}</p>
+              <p>{format(new Date(), "EEEE, MMM dd, yyyy ")}</p>
             </div>
         </div>
     );
