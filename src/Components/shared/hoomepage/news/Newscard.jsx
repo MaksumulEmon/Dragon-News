@@ -16,7 +16,7 @@ const Newscard = ({ news }) => {
                     <div className="flex gap-1 items-center">
                         <Image
                             src={news.author?.img}
-                            alt={news.author?.name}
+                            alt={news.author?.name || ""}
                             height={40}
                             width={40}
                             className="rounded-full"

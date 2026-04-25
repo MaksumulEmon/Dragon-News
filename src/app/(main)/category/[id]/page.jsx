@@ -41,7 +41,7 @@ const NewsCategory = async ({ params }) => {
                             news.map(n => {
                                 return (
                                     <Newscard key={n._id} news={n}>
-                                  
+
                                     </Newscard>
                                 )
 
