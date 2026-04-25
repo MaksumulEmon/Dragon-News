@@ -1,20 +1,8 @@
 import Leftsidebar from '@/Components/shared/hoomepage/news/Leftsidebar';
 import Rightsidebar from '@/Components/shared/hoomepage/news/Rightsidebar';
+import { getCategories, getNewsbyCategoryId } from '@/lib/data';
 import React from 'react';
 
-
-async function getCategories() {
-    const res = await fetch("https://openapi.programming-hero.com/api/news/categories");
-    const data = await res.json();
-    return data.data;
-}
-
-
-async function getNewsbyCategoryId(category_id) {
-    const res = await fetch(`https://openapi.programming-hero.com/api/news/category/${category_id}`);
-    const data = await res.json();
-    return data.data;
-}
 
 
 
@@ -42,7 +30,7 @@ const NewsCategory = async ({ params }) => {
 
 
                 <div className=" col-span-6">
-                    All News
+                    News By category
                     <div className="space-y-3 ">
 
                         {news.length === 0 && <div className='text-center text-4xl font-bold py-30'>Empty........</div>}
