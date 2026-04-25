@@ -1,3 +1,5 @@
+import Leftsidebar from "@/Components/shared/hoomepage/news/Leftsidebar";
+import Rightsidebar from "@/Components/shared/hoomepage/news/Rightsidebar";
 import Image from "next/image";
 
 async function getCategories() {
@@ -14,14 +16,7 @@ export default async function Home() {
     <div className="grid grid-cols-12 gap-4 my-20">
 
       <div className="col-span-3">
-       <p className="text-2xl text-bold font-bold"> All Cateroies</p>
-        <ul className="flex flex-col gap-3 mt-4">
-          {
-            categories.news_category.map((category, ind) => {
-              return <li key={ind} className="bg-slate-100 p-2 rounded-md font-bold text-center text-lg">{category.category_name} </li>
-            })
-          }
-        </ul>
+        <Leftsidebar categories={categories}  activeId={null}/>
 
       </div>
 
@@ -31,8 +26,8 @@ export default async function Home() {
       </div>
 
 
-      <div className="bg-red-800 col-span-3">
-        fghgfh
+      <div className=" col-span-3">
+        <Rightsidebar/>
       </div>
 
 
