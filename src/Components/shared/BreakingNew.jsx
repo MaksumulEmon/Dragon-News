@@ -25,7 +25,7 @@ const BreakingNew = () => {
             <button className='bg-red-500 text-white px-4 py-2'>Latest</button>
             <Marquee pauseOnHover={true} speed={100}>
               {news.map((n) =>{
-              return  <span key={n.id} className='flex gap-3'>{n.title}</span>
+              return  <span className='mx-5' key={n.id}>{n.title}</span>
               })}
             </Marquee>
         </div>
