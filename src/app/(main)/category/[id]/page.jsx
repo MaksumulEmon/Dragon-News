@@ -1,4 +1,5 @@
 import Leftsidebar from '@/Components/shared/hoomepage/news/Leftsidebar';
+import Newscard from '@/Components/shared/hoomepage/news/Newscard';
 import Rightsidebar from '@/Components/shared/hoomepage/news/Rightsidebar';
 import { getCategories, getNewsbyCategoryId } from '@/lib/data';
 import React from 'react';
@@ -38,9 +39,13 @@ const NewsCategory = async ({ params }) => {
 
                         {
                             news.map(n => {
-                                return <div key={n._id} className="p-6 border-2  border-black">
-                                    {n.title}
-                                </div>
+                                return (
+                                    <Newscard key={n._id} news={n}>
+                                  
+                                    </Newscard>
+                                )
+
+
                             })
                         }
                     </div>
