@@ -11,7 +11,7 @@ const Rightsidebar = () => {
             </div>
             <div className='flex gap-2 items-center'>
 
-                <buton className="btn"><FaGithub /> Login with Github</buton>
+                <button className="btn"><FaGithub /> Login with Github</button>
             </div>
 
         </div>
