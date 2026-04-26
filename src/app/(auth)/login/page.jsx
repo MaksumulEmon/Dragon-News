@@ -11,6 +11,7 @@
 // export default Loginpage;
 
 "use client";
+import { authClient } from "@/lib/auth-client";
 // import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -96,7 +97,7 @@ const Loginpage = () => {
                 </form>
 
                 <p className="mt-4">
-                    Don't have an account?{" "}
+                    Dont have an account?{" "}
                     <Link href={"/register"} className="text-blue-500">
                         Register
                     </Link>
