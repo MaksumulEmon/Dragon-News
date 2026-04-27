@@ -17,6 +17,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const Loginpage = () => {
     const {
@@ -46,7 +47,9 @@ const Loginpage = () => {
 
 
         if (res) {
-            alert("Signin successful");
+            // alert("Signin successful");
+            toast.success("Log in Successfull");
+
         }
     };
 
